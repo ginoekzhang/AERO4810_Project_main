@@ -48,9 +48,13 @@ If not:
 ## Running a Script on the Pico
 
 1. Open the `.py` file you want to run  
-2. Press: CTRL + SHIFT + P
+2. Press:
 
-3. Type and select: MicroPico: Run Current File
+```
+CTRL + SHIFT + P
+```
+
+5. Type and select: MicroPico: Run Current File
 
 This uploads and runs the script on the Pico.
 
@@ -58,15 +62,16 @@ This uploads and runs the script on the Pico.
 
 The terminal allows you to:
 
-- View output (`print()` statements)
+- View output 
 - Send commands directly to the Pico
-- Debug your code in real time
 
 ## Stopping a Script
 
 To stop execution:
 
+```
 CTRL + C
+```
 
 This interrupts the running program.
 
