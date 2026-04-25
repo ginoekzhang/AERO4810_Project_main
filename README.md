@@ -35,8 +35,9 @@ Once connected:
 - A Pico terminal should open automatically
 - You can verify connection if you see:
 
-```markdown
-\>\>\>
+```
+>>>
+```
 
 This means you're inside the MicroPython REPL.
 
