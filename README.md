@@ -79,8 +79,9 @@ This interrupts the running program.
 
 You can make the Pico automatically run your script every time it powers on by saving it as:
 
-```python
+```
 main.py 
+```
 
 then uploading it to PICO using: ```MicroPico: Upload current file to Pico``` (using > or ```CTRL + SHIFT + P``` as before)
 
