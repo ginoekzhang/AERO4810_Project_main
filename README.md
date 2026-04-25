@@ -45,13 +45,9 @@ If not:
 ## Running a Script on the Pico
 
 1. Open the `.py` file you want to run  
-2. Press:
+2. Press: CTRL + SHIFT + P
 
-CTRL + SHIFT + P
-
-3. Type and select:
-
-MicroPico: Run Current File
+3. Type and select: MicroPico: Run Current File
 
 This uploads and runs the script on the Pico.
 
