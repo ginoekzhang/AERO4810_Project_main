@@ -33,7 +33,10 @@ Install the Pico extension and MicroPython support by following the steps in tha
 Once connected:
 
 - A Pico terminal should open automatically
-- You can verify connection if you see: >>>
+- You can verify connection if you see:
+
+```markdown
+\>\>\>
 
 This means you're inside the MicroPython REPL.
 
