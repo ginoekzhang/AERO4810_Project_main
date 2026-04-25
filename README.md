@@ -1,12 +1,12 @@
 # Pico Control Setup Guide
 
-Hi friends 👋
+Hi friends
 
 This repository contains scripts and instructions for running code on the **Raspberry Pi Pico** using **VS Code + MicroPython**. This setup is used for projects like haptic motor control, sensor reading (e.g., FSR + ADS1115), and real-time interaction.
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 Make sure you have:
 
@@ -17,7 +17,7 @@ Make sure you have:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow the official Raspberry Pi Pico setup guide:
 
@@ -27,7 +27,7 @@ Install the Pico extension and MicroPython support by following the steps in tha
 
 ---
 
-## 🔧 VS Code Setup
+## VS Code Setup
 
 1. Open VS Code  
 2. Go to Extensions (left sidebar)  
@@ -36,7 +36,7 @@ Install the Pico extension and MicroPython support by following the steps in tha
 
 ---
 
-## 🔌 Connecting to the Pico
+## Connecting to the Pico
 
 Once connected:
 
@@ -52,7 +52,7 @@ If not:
 
 ---
 
-## ▶️ Running a Script on the Pico
+## Running a Script on the Pico
 
 1. Open the `.py` file you want to run  
 2. Press:
@@ -67,7 +67,7 @@ This uploads and runs the script on the Pico.
 
 ---
 
-## 🖥️ Using the Pico Terminal
+## Using the Pico Terminal
 
 The terminal allows you to:
 
@@ -77,7 +77,7 @@ The terminal allows you to:
 
 ---
 
-## ⛔ Stopping a Script
+## Stopping a Script
 
 To stop execution:
 
@@ -87,36 +87,3 @@ This interrupts the running program.
 
 ---
 
-## ⚠️ Notes
-
-- The Pico is already flashed with MicroPython, so no setup needed there
-- Do NOT power motors or high-current components from Pico 3.3V
-- Make sure all grounds are connected (Pico, drivers, external power)
-- If scripts don’t run:
-  - Check correct port
-  - Restart VS Code
-  - Reconnect Pico
-
----
-
-## 🧠 What This Repo Is For
-
-This repo is intended for:
-
-- Haptic motor control (via ULN2803A)
-- Sensor input (FSR via ADS1115)
-- Real-time interaction (sensor → actuator mapping)
-- Rapid prototyping on Pico
-
----
-
-## ✅ You're Ready
-
-You can now:
-
-- Upload and run scripts on the Pico
-- Read sensor data
-- Control motors in real time
-- Build interactive embedded systems
-
-Happy hacking 🚀
