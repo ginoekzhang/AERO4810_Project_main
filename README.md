@@ -10,7 +10,7 @@ This repository contains scripts and instructions for running code on the **Rasp
 
 Make sure you have:
 
-- Raspberry Pi Pico (MicroPython already installed ✅)
+- Raspberry Pi Pico (MicroPython already installed)
 - USB cable
 - A computer with VS Code installed
 - Pico / MicroPython extension for VS Code
