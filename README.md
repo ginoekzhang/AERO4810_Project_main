@@ -24,8 +24,8 @@ Install the Pico extension and MicroPython support by following the steps in tha
 ## VS Code Setup
 
 1. Open VS Code  
-2. Go to Extensions (left sidebar)  
-3. Search for and install a Pico / MicroPython extension  
+2. Open this REPO or New MicroPython Project using Raspberry Pi Pico Project extension
+3. Make sure your folder contains .micropico
 4. Plug in the Pico using USB  
 
 ## Connecting to the Pico
@@ -74,4 +74,13 @@ CTRL + C
 ```
 
 This interrupts the running program.
+
+## Auto-Run Script on Startup
+
+You can make the Pico automatically run your script every time it powers on by saving it as:
+
+```python
+main.py 
+
+then uploading it to PICO using: ```MicroPico: Upload current file to Pico``` (using > or ```CTRL + SHIFT + P``` as before)
 
