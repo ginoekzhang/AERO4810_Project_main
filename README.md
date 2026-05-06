@@ -85,3 +85,16 @@ main.py
 
 then uploading it to PICO using: ```MicroPico: Upload current file to Pico``` (using > or ```CTRL + SHIFT + P``` as before)
 
+# RUNNING AND PLOTTING 
+
+The haptic feedback script is already running on the PICO as main.py, it will autorun once the PICO is powered. 
+After powering the PICO and connecting to your laptop via USB, please DO NOT open VS Code and connect via MicroPython. 
+PICO only allows for one serial connection section at once. 
+
+Use Windows Powershell or any equivalent terminal on your computer and run the ```plot.py``` script. 
+You might need to install some dependancies such as matplotlib and serial if you haven't before. 
+Once the plot.py script is running, you should see constant print out of an array of numbers. 
+This is the CSV print out of the motor values. Leave the script running and proceed with your test.
+After the test is done, ```CTRL + C``` to terminate the script. 
+It should then automatically update the CSV file and plot the plot. 
+
