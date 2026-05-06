@@ -81,24 +81,23 @@ NO_TOUCH_VOLTAGE = 3.3
 FULL_PRESS_VOLTAGE = 0.2
 
 MAX_DUTY = 65535
-MIN_DUTY = 0
 
 
 def voltage_to_duty(voltage):
     """
-    Higher voltage = less pressure = less vibration
-    Lower voltage = more pressure = more vibration
+    Higher voltage = less pressure = less vibration.
+    Lower voltage = more pressure = more vibration.
     """
 
-    # Clamp voltage
     if voltage > NO_TOUCH_VOLTAGE:
         voltage = NO_TOUCH_VOLTAGE
 
     if voltage < FULL_PRESS_VOLTAGE:
         voltage = FULL_PRESS_VOLTAGE
 
-    # Invert mapping
-    strength = (NO_TOUCH_VOLTAGE - voltage) / (NO_TOUCH_VOLTAGE - FULL_PRESS_VOLTAGE)
+    strength = (NO_TOUCH_VOLTAGE - voltage) / (
+        NO_TOUCH_VOLTAGE - FULL_PRESS_VOLTAGE
+    )
 
     duty = int(strength * MAX_DUTY)
 
@@ -114,9 +113,19 @@ def all_off():
 # MAIN LOOP
 # =========================
 
+start_time = time.ticks_ms()
+
+
+print("PICO READY")
+print("CSV format:")
+print("time_s,motor0_percent,motor1_percent,motor2_percent,motor3_percent")
+
+
 try:
     while True:
-        print_values = []
+        motor_percents = []
+
+        t = time.ticks_diff(time.ticks_ms(), start_time) / 1000
 
         for ch in range(4):
             raw, voltage = read_channel(ch)
@@ -124,13 +133,18 @@ try:
             duty = voltage_to_duty(voltage)
             motors[ch].duty_u16(duty)
 
-            percent = (duty / 65535) * 100
+            percent = (duty / MAX_DUTY) * 100
+            motor_percents.append(percent)
 
-            print_values.append(
-                f"Sensor {ch}: {voltage:.2f}V -> Motor {ch}: {percent:.0f}%"
-            )
-
-        print(" | ".join(print_values))
+        
+        print(
+            f"{t:.3f},"
+            f"{motor_percents[0]:.2f},"
+            f"{motor_percents[1]:.2f},"
+            f"{motor_percents[2]:.2f},"
+            f"{motor_percents[3]:.2f}"
+        )
+        
 
         time.sleep(0.05)
 
